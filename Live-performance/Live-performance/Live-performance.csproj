@@ -46,14 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\BestellingSQLcontext.cs" />
+    <Compile Include="Context\DrankSQLContext.cs" />
+    <Compile Include="Context\IngredientSQLcontext.cs" />
+    <Compile Include="Context\Interfaces\IBestellingcontext.cs" />
+    <Compile Include="Context\Interfaces\IDrankcontext.cs" />
+    <Compile Include="Context\Interfaces\IIngredientcontext.cs" />
+    <Compile Include="Context\Interfaces\IKlantcontext.cs" />
+    <Compile Include="Context\Interfaces\IPizzacontext.cs" />
+    <Compile Include="Context\Interfaces\IProductcontext.cs" />
+    <Compile Include="Context\KlantSQLcontext.cs" />
+    <Compile Include="Context\PizzaSQLcontext.cs" />
+    <Compile Include="Context\ProductSQLcontext.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bestelling.cs" />
+    <Compile Include="Models\Drank.cs" />
+    <Compile Include="Models\Ingredient.cs" />
+    <Compile Include="Models\Klant.cs" />
+    <Compile Include="Models\Pizza.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Bestellingrepository.cs" />
+    <Compile Include="Repositories\Drankrepository.cs" />
+    <Compile Include="Repositories\Ingredientrepository.cs" />
+    <Compile Include="Repositories\Klantrepository.cs" />
+    <Compile Include="Repositories\Pizzarepository.cs" />
+    <Compile Include="Repositories\Productrepository.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,6 +103,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
