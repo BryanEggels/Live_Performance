@@ -16,7 +16,14 @@ namespace Live_performance.Models
         public List<Product> producten { get; set; }
         public void totaalprijs()
         {
-
+            decimal totaalprijs = 0;
+            foreach (Pizza pizza in pizzas)
+            {
+                foreach (Ingredient ingredient in pizza.ingredienten)
+                {
+                    totaalprijs = totaalprijs + ingredient.Verkoopprijs;
+                }
+            }
         }
         public Bestelling()
         {
