@@ -9,5 +9,11 @@ namespace Live_performance.Models
     public class Ingredient : Product
     {
         public bool Melkproduct { get; set; }
+
+
+        public override string ToString()
+        {
+            return Naam;
+        }
     }
 }

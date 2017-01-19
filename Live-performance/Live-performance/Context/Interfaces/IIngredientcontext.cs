@@ -9,6 +9,6 @@ namespace Live_performance.Context.Interfaces
 {
     public interface IIngredientcontext
     {
-        
+        List<Ingredient> GetAll();
     }
 }

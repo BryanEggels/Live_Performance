@@ -8,7 +8,7 @@ using Live_performance.Models;
 
 namespace Live_performance.Repositories
 {
-    public class Klantrepository
+    public class Klantrepository :IKlantcontext
     {
         IKlantcontext context;
 
@@ -17,5 +17,9 @@ namespace Live_performance.Repositories
             this.context = context;
         }
 
+        public Klant add(Klant klant)
+        {
+            return context.add(klant);
+        }
     }
 }

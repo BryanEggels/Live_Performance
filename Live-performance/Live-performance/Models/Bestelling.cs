@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Live_performance.Repositories;
+using Live_performance.Context;
+using Live_performance.Context.Interfaces;
 
 namespace Live_performance.Models
 {
@@ -14,6 +17,15 @@ namespace Live_performance.Models
         public void totaalprijs()
         {
 
+        }
+        public Bestelling()
+        {
+            pizzas = new List<Pizza>();
+            producten = new List<Product>();
+        }
+        public void newklant()
+        {
+            klant = new Klantrepository(new KlantSQLcontext()).add(klant);
         }
     }
 }

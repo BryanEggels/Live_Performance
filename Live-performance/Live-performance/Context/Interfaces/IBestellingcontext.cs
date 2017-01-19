@@ -11,5 +11,6 @@ namespace Live_performance.Context.Interfaces
     {
         List<Bestelling> GetAll();
         List<Bestelling> GetAll(Klant klant);
+        bool Add(Bestelling bestelling);
     }
 }

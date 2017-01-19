@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,7 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bestellingform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bestellingform.Designer.cs">
+      <DependentUpon>Bestellingform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Context\BestellingMemoryContext.cs" />
     <Compile Include="Context\BestellingSQLcontext.cs" />
+    <Compile Include="Context\Database.cs" />
     <Compile Include="Context\DrankSQLContext.cs" />
     <Compile Include="Context\IngredientSQLcontext.cs" />
     <Compile Include="Context\Interfaces\IBestellingcontext.cs" />
@@ -56,13 +65,14 @@
     <Compile Include="Context\Interfaces\IPizzacontext.cs" />
     <Compile Include="Context\Interfaces\IProductcontext.cs" />
     <Compile Include="Context\KlantSQLcontext.cs" />
+    <Compile Include="Context\PizzaMemoryContext.cs" />
     <Compile Include="Context\PizzaSQLcontext.cs" />
     <Compile Include="Context\ProductSQLcontext.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Hoofdscherm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Hoofdscherm.Designer.cs">
+      <DependentUpon>Hoofdscherm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Bestelling.cs" />
     <Compile Include="Models\Drank.cs" />
@@ -70,6 +80,12 @@
     <Compile Include="Models\Klant.cs" />
     <Compile Include="Models\Pizza.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Producten_edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Producten_edit.Designer.cs">
+      <DependentUpon>Producten_edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Bestellingrepository.cs" />
@@ -78,8 +94,26 @@
     <Compile Include="Repositories\Klantrepository.cs" />
     <Compile Include="Repositories\Pizzarepository.cs" />
     <Compile Include="Repositories\Productrepository.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="SPToevoegen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SPToevoegen.Designer.cs">
+      <DependentUpon>SPToevoegen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToevoegenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ToevoegenForm.Designer.cs">
+      <DependentUpon>ToevoegenForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bestellingform.resx">
+      <DependentUpon>Bestellingform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hoofdscherm.resx">
+      <DependentUpon>Hoofdscherm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Producten_edit.resx">
+      <DependentUpon>Producten_edit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -90,6 +124,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SPToevoegen.resx">
+      <DependentUpon>SPToevoegen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToevoegenForm.resx">
+      <DependentUpon>ToevoegenForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

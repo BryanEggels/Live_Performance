@@ -8,13 +8,18 @@ using Live_performance.Models;
 
 namespace Live_performance.Repositories
 {
-    public class Ingredientrepository
+    public class Ingredientrepository : IIngredientcontext
     {
         IIngredientcontext context;
 
         public Ingredientrepository(IIngredientcontext context)
         {
             this.context = context;
+        }
+
+        public List<Ingredient> GetAll()
+        {
+            return context.GetAll();
         }
     }
 }
