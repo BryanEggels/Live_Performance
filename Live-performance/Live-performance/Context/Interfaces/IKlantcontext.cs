@@ -8,5 +8,6 @@ namespace Live_performance.Context.Interfaces
 {
     public interface IKlantcontext
     {
+        
     }
 }
