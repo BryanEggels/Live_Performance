@@ -18,6 +18,6 @@ namespace Live_performance.Context
                 return connection;
             }
          }
-        private static string connectionstring = @"Server=mssql.fhict.local;Database=dbi356103;User Id=dbi356103;Password=Rockie73;";
+        private static string connectionstring = @"Server=mssql.fhict.local;Database=dbi356103;User Id=dbi356103;Password=Password;";
     }
 }
